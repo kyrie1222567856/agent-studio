@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Studio · 垂类 Agent 工作台</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231B222B'/><rect x='42' y='42' width='16' height='16' fill='%23E8A33D' transform='rotate(45 50 50)'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<div id="netbar"></div>
+<div id="aipill"><span class="pulse"></span><span>处理中</span><b></b></div>
+<button id="menubtn" aria-label="菜单">☰</button>
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="logo"></span>Agent Studio<small>垂类 Agent · 三合一工作台</small></div>
+    <nav>
+      <a class="navlink" href="#/" data-route="home"><span class="dot hm"></span>总览</a>
+      <a class="navlink" href="#/marketing" data-route="marketing"><span class="dot mk"></span>01 · 游戏营销热点</a>
+      <a class="navlink" href="#/drama" data-route="drama"><span class="dot dr"></span>02 · AI 漫剧工作流</a>
+      <a class="navlink" href="#/research" data-route="research"><span class="dot rs"></span>03 · 科研证据工作台</a>
+    </nav>
+    <div class="foot">
+      <div id="user-foot"></div>
+      <div id="llm-foot">LLM: …</div>
+    </div>
+  </aside>
+  <main class="main" id="view"></main>
+</div>
+<div class="toast-wrap" id="toasts"></div>
+<script src="/static/js/core.js"></script>
+<script src="/static/js/auth.js"></script>
+<script src="/static/js/marketing.js"></script>
+<script src="/static/js/drama.js"></script>
+<script src="/static/js/research.js"></script>
+<script src="/static/js/home.js"></script>
+<script>Router.start();</script>
+</body>
+</html>
